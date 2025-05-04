@@ -70,7 +70,7 @@ fun OfficeTopAppBar(title: String) {
         },
         colors = TopAppBarDefaults.topAppBarColors(
             containerColor = Color(0xFFF0F8FF),
-            titleContentColor = Color.Transparent
+            //titleContentColor = Color.Transparent
         )
     )
 }
@@ -227,10 +227,12 @@ fun FullscreenImagePopup(imageResource: Int, onDismiss: () -> Unit, bottomText: 
                     .padding(16.dp)
                     .size(48.dp),
                 shape = MaterialTheme.shapes.small,
-                colors = ButtonDefaults.buttonColors(containerColor = Color.DarkGray, contentColor = Color.White)
+                colors = ButtonDefaults.buttonColors(containerColor = Color.Gray, contentColor = Color.White),
+                contentPadding = PaddingValues(0.dp) // Remove default content padding
             ) {
                 Icon(Icons.Filled.Close, contentDescription = "Close Image", tint = Color.White)
             }
+
         }
     }
 }
